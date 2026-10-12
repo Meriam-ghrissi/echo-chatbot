@@ -64,13 +64,14 @@ export const getPublishedImages = async (req, res) => {
         const publishedImagesMessages = await Chat.aggregate([
             {$unwind: "$messages"},
             {$match: {
-                "messages.isImages": true
+                "messages.isImage": true,
+                "messages.isPublished": true
             }},
             {
                 $project: {
                     _id: 0,
                     imageUrl: "$messages.content",
-                    username: "$username"
+                    userName: "$userName"
                 }
             }
         ])
