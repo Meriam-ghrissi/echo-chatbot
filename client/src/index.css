@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+* {
+  font-family: "Outfit", sans-serif;
+}
+
+@theme {
+  --color-primary: #0a9090;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.reset-tw :not(pre):not(code){
+  all: revert
+}
+
+/* Code blocks: dark background in both light and dark mode */
+.reset-tw pre {
+  background-color: #1e1e1e !important;
+  color: #d4d4d4;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 0.75rem 0;
+  overflow-x: auto;
+}
+
+.reset-tw pre code {
+  background: transparent !important;
+  color: #d4d4d4;
+  font-family: Consolas, Monaco, "Courier New", monospace;
+  font-size: 0.85rem;
+}
+
+/* Syntax highlighting colors (VS Code Dark+ style) */
+.reset-tw pre code .token.comment,
+.reset-tw pre code .token.prolog,
+.reset-tw pre code .token.doctype,
+.reset-tw pre code .token.cdata { color: #6a9955; }
+
+.reset-tw pre code .token.keyword,
+.reset-tw pre code .token.boolean,
+.reset-tw pre code .token.atrule,
+.reset-tw pre code .token.interpolation-punctuation { color: #569cd6; }
+
+.reset-tw pre code .token.string,
+.reset-tw pre code .token.char,
+.reset-tw pre code .token.attr-value,
+.reset-tw pre code .token.template-string { color: #ce9178; }
+
+.reset-tw pre code .token.function,
+.reset-tw pre code .token.method { color: #dcdcaa; }
+
+.reset-tw pre code .token.number { color: #b5cea8; }
+
+.reset-tw pre code .token.class-name,
+.reset-tw pre code .token.builtin,
+.reset-tw pre code .token.tag { color: #4ec9b0; }
+
+.reset-tw pre code .token.property,
+.reset-tw pre code .token.variable,
+.reset-tw pre code .token.attr-name,
+.reset-tw pre code .token.parameter { color: #9cdcfe; }
+
+.reset-tw pre code .token.regex { color: #d16969; }
+
+.reset-tw pre code .token.punctuation,
+.reset-tw pre code .token.operator { color: #d4d4d4; }
+
+.loader div:nth-child(2){
+  animation-delay: 0.2s;
+}
+
+.loader div:nth-child(3){
+  animation-delay: 0.4s;
+}
+
+/* Chat messages in dark mode: colors matched to the turquoise theme */
+.dark .reset-tw h1,
+.dark .reset-tw h2,
+.dark .reset-tw h3,
+.dark .reset-tw h4 {
+  color: #5eead4;
+}
+
+.dark .reset-tw strong {
+  color: #ffffff;
+}
+
+.dark .reset-tw a {
+  color: #5eead4;
+}
+
+.dark .reset-tw hr {
+  border: none;
+  border-top: 1px solid rgba(94, 234, 212, 0.25);
+}
+
+.dark .reset-tw :not(pre) > code {
+  background: rgba(94, 234, 212, 0.12);
+  color: #99f6e4;
+  padding: 0.1rem 0.35rem;
+  border-radius: 0.25rem;
+}
