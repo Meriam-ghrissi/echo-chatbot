@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import logo_full from "./logo_full.png";
 import banner from "./banner.png";
 import banner_dark from "./banner_dark.png";
@@ -7,7 +6,7 @@ import search_icon from "./search_icon.svg";
 import user_icon from "./user_icon.png";
 import theme_icon from "./theme_icon.svg";
 import send_icon from "./send_icon.png";
-import stop_icon from "./stop_icon.svg";
+import stop_icon from "./stop_icon.png";
 import mountain_img from "./mountain_img.jpg";
 import menu_icon from "./menu_icon.svg";
 import close_icon from "./close_icon.svg";
@@ -30,7 +29,6 @@ import ai_image11 from "./ai_image11.jpg";
 import ai_image12 from "./ai_image12.jpg";
 
 export const assets = {
-    logo,
     logo_full,
     banner,
     banner_dark,
